@@ -1,0 +1,313 @@
+/* reset margin and padding on all elements */
+* {
+  padding: 0;
+  margin: 0;
+}
+
+/*************
+  TABLE OF CONTENTS:
+
+  1. GLOBAL STYLES
+
+  2. DESKTOP LAYOUT
+    2.1 HEADER
+    2.2 CONTENT GRID
+    2.3 TESTIMONIALS
+    2.4 IMAGE GRID
+    2.5 FOOTER
+
+**************/
+
+/*************
+1. GLOBAL STYLES
+**************/
+
+
+h2 {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: hsl(212, 27%, 19%);
+}
+
+h3 {
+  font-size: 1.875rem;
+  padding-bottom: 2rem;
+}
+
+h4 {
+  text-transform: uppercase;
+}
+
+h1, h2, h3, h4, h5, h6, button {
+  font-family: 'Fraunces', serif;
+}
+
+p {
+  line-height: 1.75;
+}
+
+p, a {
+  font-size: 1.125rem;
+  font-family: 'Barlow', sans-serif;
+  font-weight: 400;
+}
+
+/*************
+2. DESKTOP LAYOUT
+**************/
+
+/** 2.1 HEADER **/
+header {
+  background-image: url('images/desktop/image-header.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 51rem;
+}
+
+.menu-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2.5rem;
+}
+
+.header-logo {
+  height: 2rem;
+}
+
+.header-menu a {
+  color: white;
+  text-decoration: none;
+  padding-right: 3rem;
+}
+
+.contact-button {
+  text-transform: uppercase;
+  padding: 1rem 2rem;
+  border: none;
+  background-color: #fff;
+  border-radius: 2rem;
+  font-size: .9rem;
+  cursor: pointer;
+}
+
+.hero {
+  margin-top: 4rem;
+  display: grid;
+  grid-gap: 6.25rem;
+  justify-content: center;
+  justify-items: center;
+}
+
+.hero-title {
+  color: white;
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  letter-spacing: .5rem;
+}
+
+/** 2.2 CONTENT GRID **/
+.content-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.grid-item {
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.text-wrapper {
+  padding: 0 8.25rem;
+}
+
+.text-wrapper p {
+  color: hsl(232, 10%, 55%);
+}
+
+.text-wrapper a {
+  color: hsl(212, 27%, 19%);
+  font-family: 'Fraunces', serif;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+
+.text-wrapper a::after {
+  content: '';
+  display: inline-block;
+  position: relative;
+  background-color: rgba(250, 212, 0, 0.2);
+  top: 7px;
+  height: 10px;
+  width: 130px;
+  right: 120px;
+  z-index: -1;
+  border-radius: 1rem;
+}
+
+.grid-item-3 .text-wrapper a::after {
+  background-color: hsla(7, 99%, 70%, 0.2);
+}
+
+.grid-item-5, .grid-item-6 {
+  justify-content: flex-end;
+}
+
+.grid-item-5 .text-wrapper, .grid-item-6 .text-wrapper {
+  margin-bottom: 4rem;
+  text-align: center;
+}
+
+.grid-item-5 .text-wrapper p, .grid-item-6 .text-wrapper p {
+  font-size: 1rem;
+  padding: 0 3rem;
+  font-weight: 500;
+}
+
+.grid-item-1 p, .grid-item-3 p {
+  padding: 3.125rem 0;
+}
+
+.grid-item-3 {
+  order: 4;
+}
+.grid-item-4 {
+  order: 3;
+}
+.grid-item-5 {
+  order: 5;
+  background: url('images/desktop/image-graphic-design.jpg') /* cherry photo */
+}
+
+.grid-item-6 {
+  order: 6;
+  background: url('images/desktop/image-photography.jpg') /* orange photo */
+}
+
+.graphic-design-text {
+  color: hsl(167, 40%, 24%);
+}
+
+.grid-item-5 p {
+  color: hsl(167, 40%, 24%);
+}
+
+.photography-text {
+  color: hsl(198, 62%, 26%);
+}
+.grid-item-6 p {
+  color: hsl(198, 62%, 26%);
+}
+
+/** 2.3 TESTIMONIALS **/
+.testimonials {
+  display: grid;
+  justify-content: center;
+  justify-items: center;
+  padding: 9.5rem;
+}
+
+.testimonials h4 {
+  font-size: 1.25rem;
+  letter-spacing: .4rem;
+  color:hsl(210, 4%, 67%);
+}
+
+.client-wrapper {
+  display: flex;
+  justify-content: center;
+  padding-top: 5rem;
+  gap: 40px;
+}
+
+.client-column {
+  display: grid;
+  justify-items: center;
+}
+
+.client-image {
+  border-radius: 50%;
+  width: 4.5rem;
+}
+
+.client-name {
+  font-family: 'Fraunces', serif;
+  padding-bottom: 1rem;
+}
+
+.client-testimony {
+  text-align: center;
+  padding: 4rem 0;
+  color: hsl(213, 9%, 39%);
+  max-width: 21.3125rem;
+}
+
+.client-title {
+  font-size: .875rem;
+  font-weight: 600;
+  color: hsl(210, 4%, 67%);
+}
+
+/** 2.4 Image Grid **/
+.image-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr
+}
+
+.img-grid-item {
+  max-width: 100%;
+}
+
+/** 2.5 Footer **/
+footer {
+  color: hsl(168, 34%, 41%);
+  background: hsl(167, 44%, 70%);
+  display: grid;
+  justify-content: center;
+  justify-items: center;
+  padding: 4.5rem;
+}
+
+.footer-logo {
+  height: 2.1875rem;
+}
+
+.footer-menu {
+  margin-top: 2.5rem;
+}
+
+.footer-link {
+  color: hsl(168, 34%, 41%);
+  text-decoration: none;
+  padding: 0 1.5rem;
+}
+
+.social-icons {
+  margin-top: 5.6rem;
+}
+
+.social-icon {
+  padding: 0 .85rem;
+}
+
+/*************
+ATTRIBUTION
+**************/
+.attribution {
+  text-align: center;
+  background: hsl(167, 44%, 70%);
+  color: hsl(168, 34%, 41%);
+  padding: 1rem;
+}
+
+.attribution a {
+  color: hsl(168, 34%, 41%);
+}
+
+.attribution a:visited {
+  color: hsl(167, 40%, 24%);
+}
